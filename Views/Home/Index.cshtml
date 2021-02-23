@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Famazon";
+    ViewData["Dash"] = "-";
+    ViewData["SubTitle"] = "Home";
+}
+@model IQueryable<Book>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to @ViewData["Title"]</h1>
+    <h6>The Best Fake Amazon</h6>
+    <div>
+        <br />
+        <h3>Prof. Hilton's Favorite Books</h3>
+        <br />
+        <img src="~/books.jpg" style="width: 300px; display: block; margin-left: auto; margin-right: auto;" />
+    </div>
+    <br />
+    <br />
+    @*Here the datafrom the database is printed*@
+    @foreach (var x in Model)
+    {
+        <div>
+            <h5>
+                @x.title
+            </h5>
+            <p>
+                Author: @x.author
+            </p>
+            <p>
+                Publisher: @x.publisher
+            </p>
+            <p>
+                ISBN: @x.isbn
+            </p>
+            <p>
+                Classification/Category: @x.category
+            </p>
+            <p>
+                Price: $@x.price
+            </p>
+            <br />
+        </div>
+    }
+</div>
