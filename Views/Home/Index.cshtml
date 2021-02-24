@@ -19,26 +19,29 @@
     @*Here the datafrom the database is printed*@
     @foreach (var x in Model)
     {
-        <div>
-            <h5>
-                @x.title
-            </h5>
-            <p>
-                Author: @x.author
-            </p>
-            <p>
-                Publisher: @x.publisher
-            </p>
-            <p>
-                ISBN: @x.isbn
-            </p>
-            <p>
-                Classification/Category: @x.category
-            </p>
-            <p>
-                Price: $@x.price
-            </p>
-            <br />
-        </div>
+<div>
+    <h5>
+        @x.title
+    </h5>
+    <p>
+        Author: @x.authorFirst @x.authorMiddle @x.authorLast
+    </p>
+    <p>
+        Publisher: @x.publisher
+    </p>
+    <p>
+        ISBN: @x.isbn
+    </p>
+    <p>
+        Classification/Category: @x.classification, @x.category
+    </p>
+    <p>
+        # of Pages: @x.pages 
+    </p>
+    <p>
+        Price: $@x.price
+    </p>
+    <br />
+</div>
     }
 </div>

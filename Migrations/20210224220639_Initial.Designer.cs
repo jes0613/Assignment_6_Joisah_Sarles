@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assignment_6_Joisah_Sarles.Migrations
 {
     [DbContext(typeof(FamazonDbContext))]
-    [Migration("20210217221324_Initial")]
+    [Migration("20210224220639_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,24 +20,38 @@ namespace Assignment_6_Joisah_Sarles.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Assignment_5_Joisah_Sarles.Models.Book", b =>
+            modelBuilder.Entity("Assignment_6_Joisah_Sarles.Models.Book", b =>
                 {
                     b.Property<int>("bookId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("author")
+                    b.Property<string>("authorFirst")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("authorLast")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("authorMiddle")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("category")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("classification")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("isbn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("pages")
+                        .HasColumnType("int");
 
                     b.Property<double>("price")
                         .HasColumnType("float");
