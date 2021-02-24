@@ -27,100 +27,132 @@ namespace Assignment_6_Joisah_Sarles.Models
                     new Book
                     {
                         title = "Les Miserables",
-                        author = "Victor Hugo",
+                        authorFirst = "Victor",                   
+                        authorLast = "Hugo",
                         publisher = "Signet",
                         isbn = "978-0451419439",
-                        category = "Fiction, Classic",
+                        classification = "Fiction",
+                        category = "Classic",
+                        pages = 1488,
                         price = 9.95
                     },
 
                     new Book
                     {
                         title = "Team of Rivals",
-                        author = "Doris Kearns Goodwin",
+                        authorFirst = "Doris",
+                        authorMiddle = "Kearns",
+                        authorLast = "Goodwin",
                         publisher = "Simon & Schuster",
                         isbn = "978-0743270755",
-                        category = "Non-Fiction, Biography",
+                        classification = "Non-Fiction",
+                        category = "Biography",
+                        pages = 944,
                         price = 14.58
                     },
 
                     new Book
                     {
                         title = "The Snowball",
-                        author = "Alice Schroeder",
+                        authorFirst = "Alice",
+                        authorLast = "Schroeder",
                         publisher = "Bantam",
                         isbn = "978-0553384611",
-                        category = "Non-Fiction, Biography",
+                        classification = "Non-Fiction",
+                        category = "Biography",
+                        pages = 832,
                         price = 21.54
                     },
 
                     new Book
                     {
                         title = "American Ulysses",
-                        author = "Ronald C. White",
+                        authorFirst = "Ronald",
+                        authorMiddle = "C.",
+                        authorLast = "White",
                         publisher = "Random House",
                         isbn = "978-0812981254",
-                        category = "Non-Fiction, Biography",
+                        classification = "Non-Fiction",
+                        category = "Biography",
+                        pages = 864,
                         price = 11.61
                     },
 
                     new Book
                     {
                         title = "Unbroken",
-                        author = "Laura Hillenbrand",
+                        authorFirst = "Laura",
+                        authorLast = "Hillenbrand",
                         publisher = "Random House",
                         isbn = "978-0812974492",
-                        category = "Non-Fiction, Historical",
+                        classification = "Non-Fiction",
+                        category = "Historical",
+                        pages = 528,
                         price = 13.33
                     },
 
                     new Book
                     {
                         title = "The Great Train Robbery",
-                        author = "Michael Crichton",
+                        authorFirst = "Michael",
+                        authorLast = "Crichton",
                         publisher = "Vintage",
                         isbn = "978-0804171281",
-                        category = "Fiction, Historical Fiction",
+                        classification = "Fiction",
+                        category = "Historical Fiction",
+                        pages = 288,
                         price = 15.95
                     },
 
                     new Book
                     {
                         title = "Deep Work",
-                        author = "Cal Newport",
+                        authorFirst = "Cal",
+                        authorLast = "Newport",
                         publisher = "Grand Central Publishing",
                         isbn = "978-1455586691",
-                        category = "Non-Fiction, Self-Help",
+                        classification = "Non-Fiction",
+                        category = "Self-Help",
+                        pages = 304,
                         price = 14.99
                     },
 
                     new Book
                     {
                         title = "It's Your Ship",
-                        author = "Michael Abrashoff",
+                        authorFirst = "Michael",
+                        authorLast = "Abrashoff",
                         publisher = "Grand Central Publishing",
                         isbn = "978-1455523023",
-                        category = "Non-Fiction, Self-Help",
+                        classification = "Non-Fiction",
+                        category = "Self-Help",
+                        pages = 240,
                         price = 21.66
                     },
 
                     new Book
                     {
                         title = "The Virgin Way",
-                        author = "Richard Branson",
+                        authorFirst = "Richard",
+                        authorLast = "Branson",
                         publisher = "Portfolio",
                         isbn = "978-1591847984",
-                        category = "Non-Fiction, Business",
+                        classification = "Non-Fiction",
+                        category = "Business",
+                        pages = 400,
                         price = 29.16
                     },
 
                     new Book
                     {
                         title = "Sycamore Row",
-                        author = "John Grisham",
+                        authorFirst = "John",
+                        authorLast = "Grisham",
                         publisher = "Bantam",
                         isbn = "978-0553393613",
-                        category = "Fiction, Thrillers",
+                        classification = "Fiction",
+                        category = "Thrillers",
+                        pages = 642,
                         price = 15.03
                     }
 

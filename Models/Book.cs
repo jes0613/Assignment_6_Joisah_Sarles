@@ -16,7 +16,11 @@ namespace Assignment_6_Joisah_Sarles.Models
         public string title { get; set; }
 
         [Required]
-        public string author { get; set; }
+        public string authorFirst { get; set; }
+        public string? authorMiddle { get; set; } = "";
+
+        [Required]
+        public string authorLast { get; set; }
 
         [Required]
         public string publisher { get; set; }
@@ -28,7 +32,13 @@ namespace Assignment_6_Joisah_Sarles.Models
         public string isbn { get; set; }
 
         [Required]
+        public string classification { get; set; }
+
+        [Required]
         public string category { get; set; }
+
+        [Required]
+        public int pages { get; set; }
 
         [Required]
         public double price { get; set; }
