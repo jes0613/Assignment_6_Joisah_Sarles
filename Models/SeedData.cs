@@ -23,7 +23,47 @@ namespace Assignment_6_Joisah_Sarles.Models
             if(!context.books.Any())
             {
                 context.books.AddRange(
-                // All of the books from the spec that are seeded to the database.
+                    //Three of my favorite books
+                    new Book
+                    {
+                        title = "Throne of Glass",
+                        authorFirst = "Sarah",
+                        authorMiddle = "J.",
+                        authorLast = "Maas",
+                        publisher = "Bloomsbury Publishing",
+                        isbn = "978-1599906959",
+                        classification = "Fiction",
+                        category = "Fantasy",
+                        pages = 406,
+                        price = 6.59
+                    },
+
+                    new Book
+                    {
+                        title = "City of Bones",
+                        authorFirst = "Cassandra",
+                        authorLast = "Clare",
+                        publisher = "Simon & Schuster",
+                        isbn = "978-1481455923",
+                        classification = "Fiction",
+                        category = "Fantasy",
+                        pages = 485,
+                        price = 18.67
+                    },
+
+                    new Book
+                    {
+                        title = "Fablehaven",
+                        authorFirst = "Brandon",
+                        authorLast = "Mull",
+                        publisher = "Deseret Book Company",
+                        isbn = "978-1416947202",
+                        classification = "Fiction",
+                        category = "Fantasy",
+                        pages = 359,
+                        price = 4.39
+                    },
+                // All of the rest of the books are from the spec that are seeded to the database.
                     new Book
                     {
                         title = "Les Miserables",

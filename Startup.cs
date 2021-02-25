@@ -58,9 +58,14 @@ namespace Assignment_6_Joisah_Sarles
 
             app.UseEndpoints(endpoints =>
             {
+
+                // Changed the route so that it shows as /Books/P1, /P2, /P3... and so on
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "pagination",
+                    "books/P{page}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapDefaultControllerRoute();
             });
 
             SeedData.EnsurePopulated(app);

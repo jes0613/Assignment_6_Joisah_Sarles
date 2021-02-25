@@ -1,4 +1,5 @@
 ﻿using Assignment_6_Joisah_Sarles.Models;
+using Assignment_6_Joisah_Sarles.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,7 +15,7 @@ namespace Assignment_6_Joisah_Sarles.Controllers
         private readonly ILogger<HomeController> _logger;
         //Added a private repository
         private IFamazonRepo _repo;
-        public int ItemsPerPage = 5;
+        public int PageSize = 5;
 
         // recieves the logger and the repository then sets the private values
         public HomeController(ILogger<HomeController> logger, IFamazonRepo repo)
@@ -26,11 +27,23 @@ namespace Assignment_6_Joisah_Sarles.Controllers
         // sends the _repo.books to the view to be used to print on the index page
         public IActionResult Index(int page = 1)
         {
-            return View(_repo.books
-                .OrderBy(p => p.bookId)
-                .Skip((page - 1) * ItemsPerPage)
-                .Take(ItemsPerPage)
-                );
+
+            //UPdate the new to include the booklistviewmodel
+            return View(new BookListViewModel
+            {
+                Books = _repo.books
+                    .OrderBy(p => p.bookId)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize)
+                    ,
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repo.books.Count()
+                }
+            });
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -7,6 +7,8 @@ namespace Assignment_6_Joisah_Sarles.Models.ViewModels
 {
     public class PagingInfo
     {
+
+        // the paginginfo model that makes pagination possible
         public int TotalNumItems { get; set; }
         public int ItemsPerPage { get; set; }
         public int CurrentPage { get; set; }

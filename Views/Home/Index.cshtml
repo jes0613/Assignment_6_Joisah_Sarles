@@ -3,7 +3,7 @@
     ViewData["Dash"] = "-";
     ViewData["SubTitle"] = "Home";
 }
-@model IQueryable<Book>
+@model BookListViewModel
 
 <div class="text-center">
     <h1 class="display-4">Welcome to @ViewData["Title"]</h1>
@@ -17,31 +17,36 @@
     <br />
     <br />
     @*Here the datafrom the database is printed*@
-    @foreach (var x in Model)
+    @foreach (var x in Model.Books)
     {
-<div>
-    <h5>
-        @x.title
-    </h5>
-    <p>
-        Author: @x.authorFirst @x.authorMiddle @x.authorLast
-    </p>
-    <p>
-        Publisher: @x.publisher
-    </p>
-    <p>
-        ISBN: @x.isbn
-    </p>
-    <p>
-        Classification/Category: @x.classification, @x.category
-    </p>
-    <p>
-        # of Pages: @x.pages 
-    </p>
-    <p>
-        Price: $@x.price
-    </p>
-    <br />
-</div>
+    <div class="">
+        <h5>
+            @x.title
+        </h5>
+        <p>
+            Author: @x.authorFirst @x.authorMiddle @x.authorLast
+        </p>
+        <p>
+            Publisher: @x.publisher
+        </p>
+        <p>
+            ISBN: @x.isbn
+        </p>
+        <p>
+            Classification/Category: @x.classification, @x.category
+        </p>
+        <p>
+            # of Pages: @x.pages 
+        </p>
+        <p>
+            Price: $@x.price
+        </p>
+        <br />
+    </div>
     }
+    @*The css for the pagination highlight is in the site.css
+        I also added an if statement to the PageListTageHelper that highlights the current page*@
+<div page-model="@Model.PagingInfo" page-action="Index" class="paginationhighlight">
+
+</div>
 </div>

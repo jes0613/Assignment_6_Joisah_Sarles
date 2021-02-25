@@ -14,6 +14,8 @@ namespace Assignment_6_Joisah_Sarles.Infrastructure
     [HtmlTargetElement("div", Attributes = "page-model")]
     public class PageLinkTagHelper : TagHelper
     {
+        //THis is the TagHelper Class I made for pagination
+        //Contains all the stuff from the videos for this week
 
         private IUrlHelperFactory urlHelperFactory;
 
@@ -36,6 +38,11 @@ namespace Assignment_6_Joisah_Sarles.Infrastructure
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i });
+                //this if statement makes it so the current page is highlighted
+                if (i == PageModel.CurrentPage)
+                {
+                    tag.Attributes["class"] = "active";
+                }
                 tag.InnerHtml.Append(i.ToString());
 
                 result.InnerHtml.AppendHtml(tag);

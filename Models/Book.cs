@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Assignment_6_Joisah_Sarles.Models
 {
     //The book class, has the fields needed for the projects as listed in the spec
+    // I made sure to normalize the database for all the fields/variables
     //All the fields are required and the bookId is set as the Key
     public class Book
     {
@@ -37,6 +38,8 @@ namespace Assignment_6_Joisah_Sarles.Models
         [Required]
         public string category { get; set; }
 
+
+        //Added this pages to the model
         [Required]
         public int pages { get; set; }
 
